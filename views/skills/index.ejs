@@ -13,13 +13,14 @@
     <ul>
           <% skills.forEach(function(t) { %>
             <li>
-              <a href="skills/<%= t.id %>"><%= t.skill %></a>
+              <a href="/skills/<%= t.id %>"><%= t.skill %></a>
               <%= t.skill %>
                 - 
               <%= t.learned ? 'done' : 'not done' %>
             </li>
           <% }); %>
         </ul>
+      <a href="/">Home Page</a>
 </body>
 
 </html>
