@@ -10,7 +10,9 @@
 <body>
 
     <h3><%= skill.skill %></h3>
-    <h3> Learned: <%= skill.done ? 'Yes' : 'No' %></h3>
+    <h3> learned: <%= skill.done ? 'Yes' : 'No' %></h3>
+    <br>
+    <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
 
 </body>
 </html>

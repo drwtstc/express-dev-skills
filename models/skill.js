@@ -13,7 +13,8 @@ module.exports = {
   getAll,
   getOne,
   create,
-  deleteOne
+  deleteOne,
+  update
 };
 
 function getAll() {
@@ -21,7 +22,6 @@ function getAll() {
 };
 
 function getOne(id) {
-  // URL params are strings - convert to a number
   id = parseInt(id);
   return skills.find (skill => skill.id === id);
 };
@@ -36,4 +36,11 @@ function deleteOne(id){
   id = parseInt(id);
   const idx = skills.findIndex(skill => skill.id === id);
   skills.splice(idx, 1);
+};
+
+function update(id, skill){
+  id = parseInt(id)
+  const idx = skills.findIndex(skill => skill.id === id)
+  skill.id = parseInt(id)
+  skills.splice(idx, 1, skill)
 };
