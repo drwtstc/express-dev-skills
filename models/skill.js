@@ -28,7 +28,7 @@ function getOne(id) {
 
 function create(skill) {
   skill.id = Date.now() % 1000000;
-  skill.done = false;
+  skill.learned = false;
   skills.push(skill);
 };
 
@@ -39,8 +39,10 @@ function deleteOne(id){
 };
 
 function update(id, skill){
+  console.log('before', skill)
   id = parseInt(id)
   const idx = skills.findIndex(skill => skill.id === id)
   skill.id = parseInt(id)
+  console.log('after', skill)
   skills.splice(idx, 1, skill)
 };
